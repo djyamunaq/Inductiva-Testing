@@ -1,0 +1,36 @@
+# COMMAND: foamDictionary system/decomposeParDict -entry numberOfSubdomains -set 2 
+
+
+ -------
+# COMMAND: surfaceFeatures  
+
+
+ -------
+# COMMAND: blockMesh  
+
+
+ -------
+# COMMAND: decomposePar -copyZero 
+
+
+ -------
+# COMMAND: mpirun --allow-run-as-root -np 2 snappyHexMesh -overwrite -parallel 
+
+
+ -------
+# COMMAND: mpirun --allow-run-as-root -np 2 potentialFoam  -parallel 
+
+
+ -------
+# COMMAND: mpirun --allow-run-as-root -np 2 simpleFoam  -parallel 
+
+
+ -------
+# COMMAND: reconstructParMesh -constant 
+
+
+ -------
+# COMMAND: reconstructPar -latestTime 
+
+
+ -------
