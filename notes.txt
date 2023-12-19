@@ -1,8 +1,0 @@
-Tested in Ubuntu 20.04 Linux Subsystem at Windows 11
-
-1. At 'inductiva\utils\templates.py' changed:
-    environment = Environment(loader=FileSystemLoader(template_dir))
-    
-    to
-
-    environment = Environment(loader=FileSystemLoader(str(template_dir)))
