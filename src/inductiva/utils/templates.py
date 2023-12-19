@@ -37,13 +37,13 @@ def replace_params(
     template_filename = template_path.name
 
     # Debug message on template_dir type
-    print('===========================================')
-    print(bcolors.BOLD, bcolors.WARNING, '[DEBUG]: START template_dir')
-    print('\t', template_dir)
-    print('\t', type(template_dir))
-    print(bcolors.BOLD, bcolors.WARNING, '[DEBUG]: END template_dir')
-    print(bcolors.ENDC)
-    print('===========================================')
+    # print('===========================================')
+    # print(bcolors.BOLD, bcolors.WARNING, '[DEBUG]: START template_dir')
+    # print('\t', template_dir)
+    # print('\t', type(template_dir))
+    # print(bcolors.BOLD, bcolors.WARNING, '[DEBUG]: END template_dir')
+    # print(bcolors.ENDC)
+    # print('===========================================')
 
     environment = Environment(loader=FileSystemLoader(str(template_dir)))
     template = environment.get_template(template_filename)
